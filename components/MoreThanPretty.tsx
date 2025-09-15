@@ -1,3 +1,5 @@
+
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -63,24 +65,25 @@ export default function MoreThanPretty() {
       </motion.div>
 
       {/* Right Column - Image */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-        viewport={{ once: true }}
-        className="flex justify-center"
-      >
-        <div className="w-full max-w-md aspect-video relative">
-          <Image
-            src="/Capture.PNG" // Ensure this is inside /public
-            alt="Preview of a restaurant website designed by Hoast"
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover rounded-md shadow"
-            priority
-          />
-        </div>
-      </motion.div>
+     <motion.div
+  initial={{ opacity: 0, x: 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+  viewport={{ once: true }}
+  className="flex justify-center"
+>
+  <div className="w-full max-w-md aspect-video relative bg-gray-100 rounded-md shadow flex items-center justify-center">
+    <Image
+      src="/Capture.PNG" // make sure it's in /public
+      alt="Preview of a restaurant website designed by Hoast"
+      fill
+      sizes="(max-width: 768px) 100vw, 50vw"
+      className="object-contain p-2"
+      priority
+    />
+  </div>
+</motion.div>
+
     </section>
   );
 }
